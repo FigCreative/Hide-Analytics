@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+
+	"name": "Analytics Hider",
+	"description": "Hides filter details when hovering in analytics",
+	"version": "1.1.0",
+
+	"content_scripts": [
+		{
+			"matches": ["*://analytics.google.com/*"],
+			"css": ["analytics.css"]
+		}
+	],
+
+	"browser_action": {
+		"default_icon": "icon-19.png"
+	},
+
+	"permissions": [
+		"activeTab",
+		"declarativeContent"
+	],
+
+	"icons" : {
+		"48" : "icon-48.png",
+		"128" : "icon-128.png"
+	}
+}
