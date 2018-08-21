@@ -3,11 +3,12 @@
 
 	"name": "Analytics Hider",
 	"description": "Hides filter details when hovering in analytics",
-	"version": "1.1.0",
+	"version": "1.2.0",
 
 	"content_scripts": [
 		{
 			"matches": ["*://analytics.google.com/*"],
+			"all_frames": true,
 			"css": ["analytics.css"]
 		}
 	],
