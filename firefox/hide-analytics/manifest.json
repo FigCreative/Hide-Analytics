@@ -1,0 +1,37 @@
+{
+	"manifest_version": 2,
+
+	"name": "Analytics Hider",
+	"description": "Hides filter details when hovering in analytics",
+	"version": "1.2.2",
+	"id": "analytics@figcreative.co.uk",
+
+	"applications": {
+		"gecko": {
+			"id": "analytics@figcreative.co.uk"
+		}
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://analytics.google.com/*"],
+			"all_frames": true,
+			"css": ["analytics.css"]
+		}
+	],
+
+	"browser_action": {
+		"default_icon": "icon-19.png"
+	},
+
+	"permissions": [
+		"activeTab",
+		"declarativeContent"
+	],
+
+	"icons" : {
+		"48" : "icon-48.png",
+		"64" : "icon-64.png",
+		"128" : "icon-128.png"
+	}
+}
